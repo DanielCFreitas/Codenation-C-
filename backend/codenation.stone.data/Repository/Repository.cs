@@ -1,34 +1,76 @@
-﻿using System;
+﻿using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
 using System.Text;
-
+/// <summary>
+/// Classe Repository responsavel pela manipulacao dos dados no banco de dado
+/// </summary>
 namespace codenation.stone.data.Repository
 {
-    public class Repository : IRepository
+    public class Repository<T> : IRepository<T> where T : class
     {
-        public void Create<T>(T Model)
+        private readonly ApplicationDbContext _db;
+        private readonly DbSet<T> _dbSet;
+        public Repository(ApplicationDbContext db)
         {
-            throw new NotImplementedException();
+            _db = db;
+            _dbSet = db.Set<T>();
+        }
+        /// <summary>
+        /// Recupera um registro do banco de dados
+        /// </summary>
+        /// <param name="Id"> Id do registro que deve ser recuperado </param>
+        /// <returns> Retorna o registro que foi encontrado </returns>
+        public T Get(Guid Id)
+        {
+            return _dbSet.Find(Id);
         }
 
-        public void Delete(Guid Id)
+        /// <summary>
+        /// Recupera todos os registros de uma tabela do banco de dados
+        /// </summary>
+        /// <returns> Registros que foram encontrados </returns>
+        public IEnumerable<T> GetAll()
         {
-            throw new NotImplementedException();
+            return _dbSet;
         }
 
-        public T Get<T>()
+        /// <summary>
+        /// Cadastra um novo registro no banco de dados
+        /// </summary>
+        /// <param name="Model"> Registro que deve ser salvo no banco de dados </param>
+        public void Create(T Model)
         {
-            throw new NotImplementedException();
+            _dbSet.Add(Model);
+            SaveChanges();
         }
 
-        public List<T> GetAll<T>()
+        /// <summary>
+        /// Atualiza um registro no banco de dados
+        /// </summary>
+        /// <param name="Model"> Registro que deve ser atualizado no banco de dados </param>
+        public void Update(T Model)
         {
-            throw new NotImplementedException();
+            _db.Entry(Model).State = EntityState.Modified;
+            SaveChanges();
         }
 
-        public void Update<T>(Guid Id, T Model)
+        /// <summary>
+        /// Exclui um registro do banco de dados
+        /// </summary>
+        /// <param name="Model"> Registro que deve ser excluido no banco de dados </param>
+        public void Delete(T Model)
         {
-            throw new NotImplementedException();
+            _db.Remove(Model);
+            SaveChanges();
+        }
+
+        /// <summary>
+        /// Salva as alterações realizadas no banco de dados
+        /// </summary>
+        public void SaveChanges()
+        {
+            _db.SaveChanges();
         }
     }
 }

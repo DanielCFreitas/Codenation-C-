@@ -4,12 +4,12 @@ using System.Text;
 
 namespace codenation.stone.data.Repository
 {
-    interface IRepository
+    interface IRepository<T> where T : class
     {
-        public T Get<T>();
-        public List<T> GetAll<T>();
-        public void Create<T>(T Model);
-        public void Update<T>(Guid Id, T Model);
-        public void Delete(Guid Id);
+        public T Get(Guid Id);
+        public IEnumerable<T> GetAll();
+        public void Create(T Model);
+        public void Update(T Model);
+        public void Delete(T Model);
     }
 }
