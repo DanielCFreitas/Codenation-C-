@@ -1,0 +1,4 @@
+C:\Users\danie\Desktop\Codenation-C-Sharp\backend\codenation.stone.data\bin\Debug\netcoreapp3.1\codenation.stone.data.exe
+C:\Users\danie\Desktop\Codenation-C-Sharp\backend\codenation.stone.data\obj\Debug\netcoreapp3.1\codenation.stone.data.csprojAssemblyReference.cache
+C:\Users\danie\Desktop\Codenation-C-Sharp\backend\codenation.stone.data\obj\Debug\netcoreapp3.1\codenation.stone.data.AssemblyInfoInputs.cache
+C:\Users\danie\Desktop\Codenation-C-Sharp\backend\codenation.stone.data\obj\Debug\netcoreapp3.1\codenation.stone.data.AssemblyInfo.cs
