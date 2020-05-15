@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-
+/// <summary>
+/// Classe que representa as tabelas de Logs do banco de dados
+/// </summary>
 namespace codenation.stone.data.Models
 {
     public class Log
