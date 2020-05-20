@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.30104.148
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "codenation.stone.data", "codenation.stone.data\codenation.stone.data.csproj", "{D7B63D0B-CD44-47EC-9BA0-74787FD6A78A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassLibrary1", "ClassLibrary1\ClassLibrary1.csproj", "{A61C6F7F-3594-4B4C-8D92-6A068C03B20A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "codenation.stone.webapi", "codenation.stone.webapi\codenation.stone.webapi.csproj", "{A99604C8-9339-4159-98E1-28923D2643B5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +17,10 @@ Global
 		{D7B63D0B-CD44-47EC-9BA0-74787FD6A78A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D7B63D0B-CD44-47EC-9BA0-74787FD6A78A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D7B63D0B-CD44-47EC-9BA0-74787FD6A78A}.Release|Any CPU.Build.0 = Release|Any CPU
-		{A61C6F7F-3594-4B4C-8D92-6A068C03B20A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{A61C6F7F-3594-4B4C-8D92-6A068C03B20A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{A61C6F7F-3594-4B4C-8D92-6A068C03B20A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{A61C6F7F-3594-4B4C-8D92-6A068C03B20A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A99604C8-9339-4159-98E1-28923D2643B5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A99604C8-9339-4159-98E1-28923D2643B5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A99604C8-9339-4159-98E1-28923D2643B5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A99604C8-9339-4159-98E1-28923D2643B5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
