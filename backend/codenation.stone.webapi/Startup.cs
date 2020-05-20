@@ -1,15 +1,10 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using codenation.stone.data;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
-using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
 
 namespace codenation.stone.webapi
 {
@@ -25,6 +20,13 @@ namespace codenation.stone.webapi
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            /// Injecao de dependencia do contexto do Banco de Dados
+            services.AddDbContext<ApplicationDbContext>(options => 
+                options.UseNpgsql(
+                    Configuration.GetConnectionString("Default")
+                    )
+                );
+
             services.AddControllers();
         }
 
